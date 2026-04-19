@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "langchain-instanode"
-version = "0.1.0"
+version = "0.2.0"
 description = "LangChain tools for instanode.dev — let AI agents provision ephemeral Postgres databases and webhook receivers"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -33,7 +33,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
-    "instanode>=0.2.0",
+    "instanode>=0.3.0",
     "langchain-core>=0.3.0",
     "pydantic>=2.0",
 ]

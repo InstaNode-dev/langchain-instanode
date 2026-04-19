@@ -17,8 +17,11 @@ agent skip all of that and just *get a database*.
 
 - `provision_postgres` → a `postgres://` DSN (pgvector pre-installed for RAG).
 - `provision_webhook`  → an HTTPS receiver URL (good for GitHub/Stripe/Slack flows).
-- `provision_mongo`    → a `mongodb://` URI.
 - `list_resources`     → enumerate what the agent has already provisioned.
+
+MongoDB, Redis/cache, NATS queue, and heartbeat-monitor tools are on the
+roadmap, gated on the corresponding backend endpoints landing. They live
+on the `feature/full-api` branch.
 
 Free tier: anonymous, 24h TTL, 10 MB / 2 connections. Paid tier (set
 `INSTANODE_API_KEY`): permanent, 500 MB / 5 connections, higher provisioning
