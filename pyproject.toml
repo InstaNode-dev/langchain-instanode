@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "langchain-instanode"
+version = "0.1.0"
+description = "LangChain tools for instanode.dev — let AI agents provision ephemeral Postgres databases and webhook receivers"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+keywords = [
+    "langchain",
+    "langchain-tool",
+    "instanode",
+    "postgres",
+    "database",
+    "webhook",
+    "ai-agents",
+    "mcp",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Database",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "instanode>=0.2.0",
+    "langchain-core>=0.3.0",
+    "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0", "pytest-asyncio>=0.23"]
+
+[project.urls]
+Homepage = "https://instanode.dev"
+Documentation = "https://instanode.dev/docs"
+Repository = "https://github.com/InstaNode-dev/langchain-instanode"
+"Bug Tracker" = "https://github.com/InstaNode-dev/langchain-instanode/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["langchain_instanode*"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
